@@ -10,22 +10,22 @@ def createWindow(windowTitle, Geometry):
     window.mainloop()
 
 def createButton(X, Y, Text, Color, BackgroundColor, Center, Command):
-    if (Center == False):
-        btn=Button(window, text=Text, fg=Color, bg=BackgroundColor, command=Command)
-        btn.place(x=X, y=Y)
-    else:
+    if (Center):
         btn=Button(window, text=Text, fg=Color, bg=BackgroundColor, command=Command)
         btn.config(anchor='center')
         btn.pack()
+    else:
+        btn=Button(window, text=Text, fg=Color, bg=BackgroundColor, command=Command)
+        btn.place(x=X, y=Y)
 
 def createText(X, Y, Text, Color, BackgroundColor, Font, Center):
-    if (Center == False):
-        lbl=Label(window, text=Text, fg=Color, bg=BackgroundColor, font=Font)
-        lbl.place(x=X, y=Y)
-    else:
+    if (Center):
         lbl=Label(window, text=Text, fg=Color, bg=BackgroundColor, font=Font)
         lbl.config(anchor='center')
         lbl.pack()
+    else:
+        lbl=Label(window, text=Text, fg=Color, bg=BackgroundColor, font=Font)
+        lbl.place(x=X, y=Y)
 
 def setIconICO(File):
     window.iconbitmap(File)
