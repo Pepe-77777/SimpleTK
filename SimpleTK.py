@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import font
 import tkinter.messagebox
 
 window = Tk()
@@ -44,3 +45,9 @@ def createMessageBoxWarning(Title, Text):
 
 def setBackground(Color):
     window.configure(background=Color)
+
+def updateScreen():
+    window.update()
+
+def updateIdleTasks():
+    window.update_idletasks()
