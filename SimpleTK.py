@@ -4,12 +4,12 @@ import tkinter.messagebox
 window = Tk()
 # add widgets here
 
-def createWindow(windowTitle, Geometry):
+def createWindow(windowTitle=None, Geometry=None):
     window.title(windowTitle)
     window.geometry(Geometry)
     window.mainloop()
 
-def createButton(X, Y, Text, Color, BackgroundColor, Center, Command):
+def createButton(X=None, Y=None, Text=None, Color=None, BackgroundColor=None, Center=None, Command=None):
     if (Center):
         btn=Button(window, text=Text, fg=Color, bg=BackgroundColor, command=Command)
         btn.config(anchor='center')
@@ -18,7 +18,7 @@ def createButton(X, Y, Text, Color, BackgroundColor, Center, Command):
         btn=Button(window, text=Text, fg=Color, bg=BackgroundColor, command=Command)
         btn.place(x=X, y=Y)
 
-def createText(X, Y, Text, Color, BackgroundColor, Font, Center):
+def createText(X=None, Y=None, Text=None, Color=None, BackgroundColor=None, Font=None, Center=None):
     if (Center):
         lbl=Label(window, text=Text, fg=Color, bg=BackgroundColor, font=Font)
         lbl.config(anchor='center')
@@ -33,13 +33,13 @@ def setIconICO(File):
 def setIconPNG(File):
     window.tk.call('wm', 'iconphoto', window._w, PhotoImage(file=File))
 
-def createMessageBoxInfo(Title, Text):
+def createMessageBoxInfo(Title=None, Text=None):
     tkinter.messagebox.showinfo(Title, Text)
 
-def createMessageBoxError(Title, Text):
+def createMessageBoxError(Title=None, Text=None):
     tkinter.messagebox.showerror(Title, Text)
 
-def createMessageBoxWarning(Title, Text):
+def createMessageBoxWarning(Title=None, Text=None):
     tkinter.messagebox.showwarning(Title, Text)
 
 def setBackground(Color):
@@ -50,3 +50,6 @@ def updateScreen():
 
 def updateIdleTasks():
     window.update_idletasks()
+    
+def setTitle(Title):
+    window.title(Title)
