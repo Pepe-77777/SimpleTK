@@ -2,7 +2,6 @@ from tkinter import *
 import tkinter.messagebox
 
 window = Tk()
-# add widgets here
 
 def createWindow(windowTitle=None, Geometry=None):
     window.title(windowTitle)
@@ -49,7 +48,16 @@ def updateScreen():
     window.update()
 
 def updateIdleTasks():
-    window.update_idletasks()
-    
+    window.update_idletasks() 
+
 def setTitle(Title):
     window.title(Title)
+
+def destroy():
+    window.destroy()
+
+def setResizable(Resizable):
+    if (Resizable):
+        None
+    else:
+        window.resizable(FALSE, FALSE)
