@@ -11,7 +11,7 @@ SimpleTK.createText(60, 50, "Clique para adicionar 1+1", "black", "white", ("Hel
 SimpleTK.createButton(80, 100, "Adicionar", "black", "white", Center=True, Command=None)
 
 # Botar um icon de ICO
-SimpleTK.setIconICO("icon/ico.ico")
+# SimpleTK.setIconICO("icon/ico.ico")
 
 # Botar um icon de PNG
 SimpleTK.setIconPNG("icon/ico.png")

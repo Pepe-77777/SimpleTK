@@ -26,6 +26,9 @@ def createText(X=None, Y=None, Text=None, Color=None, BackgroundColor=None, Font
         lbl=Label(window, text=Text, fg=Color, bg=BackgroundColor, font=Font)
         lbl.place(x=X, y=Y)
 
+def getWindow():
+    return Tk
+
 def setIconICO(File):
     window.iconbitmap(File)
 
