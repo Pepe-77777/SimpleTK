@@ -1,4 +1,5 @@
 # Importar o SimpleTK
+from time import sleep
 import SimpleTK
 
 # Deixar o fundo azul
@@ -18,3 +19,11 @@ SimpleTK.setIconPNG("icon/ico.png")
 
 # Criar a janela
 SimpleTK.createWindow("Example APP", None)
+
+# Como usar os GET's
+
+# Pegar todos os comandos para usar da janela
+SimpleTK.getWindow()
+
+# Pegar todos os comandos do tkinter
+SimpleTK.getTkinter()
